@@ -1,0 +1,37 @@
+Czym jest SASS i konfiguracja środowiska
+Preprocesory CSS to narzędzie pozwalające tworzyć oraz utrzymywać arkusze stylów w sposób dużo lepiej zorganizowany i czytelny. Dzięki nim możemy lepiej zarządzać arkuszem i szybciej dokonywać w nich zmian. Najpopularniejszym aktualnie preprocesorem jest SASS.
+
+SASS (Syntactical Awesome Stylesheet) jest językiem skryptowym, którego kod przetwarzany jest do plików wynikowych kaskadowych arkuszy stylów – CSS.
+
+Wprowadza on całkiem sporą liczbę udogodnień dla programisty począwszy od struktur zagnieżdżonych, poprzez mixiny, zmienne, kończąc na pętlach zarówno warunkowych jak i iteracyjnych.
+
+SASS nie jest obsługiwany przez przeglądarkę – kod wymaga kompilacji do CSS. W tym celu konieczne jest skonfigurowanie środowiska przed rozpoczęciem pracy.
+
+Instalacja pluginu
+Po uruchomieniu Visual Studio Code, instalujemy rozszerzenie. Przechodzimy do:
+File -> Preferences -> Extensions
+Wyszukujemy potrzebne rozszerzenie, czyli Live Sass Compiler, następnie należy kliknąć Install.
+
+Konfiguracja
+Plugin jest już gotowy do pracy. W tym momencie tłumaczy on pliki .scss tworząc pliki .css w tym samym folderze. Najczęściej w projektach chcemy mieć te pliki w osobnych folderach – taka organizacja plików znacznie ułatwia pracę. W tym celu konieczna jest modyfikacja ustawień pluginu.
+
+1. Wchodzimy w: File -> Preferences -> Settings
+2. Wybieramy plugin Live Sass Compiler z listy rozszerzeń
+3. Wchodzimy w Edit in settings.json
+4. W celu konfiguracji, umieszczamy w tym pliku kod:
+
+?
+1
+2
+3
+4
+5
+"liveSassCompile.settings.formats": [{
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "./css"
+    }]
+Za ustawienie miejsca zapisu plików .css odpowiedzialna jest właściwość savePath. Określenie lokalizacji poprzez zapis ./css oznacza zapisywanie plików w osobnym folderze css.
+
+Uruchomienie kompilatora
+Kompilacja plików .scss do .css wymaga uruchomienia kompilatora, który będzie obserwował zmiany w polikach .scss i automatyczne zamieniał je na wynikowy kod. Kliknij na dolnym pasku VSC przycisk „Watch Sass”
