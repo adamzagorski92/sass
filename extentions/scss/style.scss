@@ -1,4 +1,5 @@
 @import 'utils/variables'; // jeśli zmienne przenosimy do inne pliku czątkowego to musimy umieścić jego import wyżej niż inne style, które korzystają z tych zmiennych
+@import 'components/buttons';
 @import 'utils/mixins';
 @import 'leyout/base';
 @import 'leyout/header';
