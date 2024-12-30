@@ -1,0 +1,6 @@
+@import 'utils/variables'; // jeśli zmienne przenosimy do inne pliku czątkowego to musimy umieścić jego import wyżej niż inne style, które korzystają z tych zmiennych
+@import 'leyout/base';
+@import 'leyout/section'; 
+// przed nazwą cząstki trzeba dać "_", a następnie zaimportować, pozwala to w sposób logiczny zarządzać stylami strony
+
+// w pliku style.scss zwykle są tylko importy
